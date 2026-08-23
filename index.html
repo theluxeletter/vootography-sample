@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vootography Photo Studio</title>
+  <meta name="description" content="Vootography Photo Studio — Photography, beautifully captured.">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #030507; }
+    body { min-height: 100vh; }
+
+    .page {
+      position: relative;
+      width: 100%;
+      max-width: 1024px;
+      margin: 0 auto;
+      line-height: 0;
+      overflow: hidden;
+    }
+
+    .page img {
+      display: block;
+      width: 100%;
+      height: auto;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    /* Invisible clickable area placed exactly over the "BOOK NOW ON WHATSAPP" button. */
+    .whatsapp-booking {
+      position: absolute;
+      left: 58.4%;
+      top: 87.7%;
+      width: 25.1%;
+      height: 3.0%;
+      display: block;
+      z-index: 5;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    .whatsapp-booking:focus-visible {
+      outline: 2px solid #d6af52;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 1024px) {
+      .page { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <img
+      src="assets/vootography-landing-page.png"
+      alt="Vootography Photo Studio"
+    >
+
+    <a
+      class="whatsapp-booking"
+      href="https://wa.me/263776198385?text=Hello%2C%20I%20would%20like%20to%20book%20a%20session%20with%20you."
+      target="_blank"
+      rel="noopener"
+      aria-label="Book a session on WhatsApp"
+    ></a>
+  </main>
+</body>
+</html>
